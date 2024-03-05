@@ -89,7 +89,16 @@
   'page_path': '/home.htm',
   'timestamp_micros': Date.now() * 1000,//convert millis to micros
   'date': new Date().toLocaleDateString(),
-});</script></head>
+});</script>
+  <script>
+  // Track a click event on the LinkedIn link
+  document.querySelector('a[href="https://www.linkedin.com/in/bishnu-haldar-03284a22b/"]').addEventListener('click', function() {
+    gtag('event', 'link_click', {
+      'link_text': 'linkedin'
+    });
+  });
+</script>
+</head>
   <body>
     <!-- Header Area wrapper Starts -->
     <header id="header-wrap">
